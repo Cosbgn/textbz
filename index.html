@@ -1,0 +1,89 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <!-- COMMON TAGS -->
+  <meta charset="utf-8">
+  <title>Typer</title>
+  <!-- Search Engine -->
+  <meta name="description" content="Speed up video recording">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.css" />
+  <link type="text/css" rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link rel="stylesheet" href="index.css" />
+
+</head>
+
+<body>
+
+  <div id='vue-home'>
+		<section class='section'>
+			<h1 class='title'>Text.bz - Link Your Whatsapp with the world 🌎</h1>
+			<h2 class='subtitle'>Create a short url like text.bz/acme</h2>
+			<hr />
+        <div class='columns'>
+            <div class='column'>
+                <article class="message is-danger">
+                    <div class='message-body'>
+                        Stop adding phone numbers to your contacts just to whatsapp them
+                    </div>
+                </article>
+            </div>
+            <div class='column'>
+                <article class="message is-primary">
+                    <div class='message-body'>
+                        <p>Simply add copy paste the number after <b>https://text.bz/</b>
+                            It works with every country.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <hr />
+
+        <article class="message is-info">
+            <div class='message-body'>
+                <div class="field">
+                  <label class="label">Try it Yourself:</label>
+                  <div class="control">
+                    <input class="input" v-model='phoneNumber' type="text" placeholder="Enter Your Phone Number">
+                  </div>
+                  <p class="help">Please add country codes as +1, 001 or just 1. <b>They will all work.</b></p>
+                  <br />
+                  <div class="control">
+                      <a class='button is-primary is-fullwidth' v-if='phoneNumber.length>6'>{{finalUrl}}</a>
+                      <a class='button is-fullwidth' v-else disabled>{{finalUrl}} (Phone Number too short)</a>
+                  </div>
+                </div>
+
+            </div>
+        </article>
+
+
+
+
+			<div class='columns'>
+				<div class='column is-3'>
+					<div class="field">
+					  <label class="label">Simply add any phone number after text.bz</label>
+					  <div class="control">
+					    	<textarea wrap="off" class="textarea" type="textarea" placeholder="def sample_code():" style='height:50vh' v-model='code'></textarea>
+						</div>
+					</div>
+				</div>
+				<div class='column is-9'>
+					<pre>
+						{{code}}
+					</pre>
+				</div>
+			</div>
+		</section>
+  </div>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="index.js"></script>
+
+</body>
+</html>
