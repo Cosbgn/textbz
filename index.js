@@ -3,31 +3,30 @@ var Foo = { template: '<div>Foo</div>' }
 
 
 var router = new VueRouter({
-  mode: 'history',
-  routes: [
-    { path: '/:number', component: Home },
-    { path: '/foo', component: Foo }
-  ]
+    mode: 'history',
+        routes: [
+            { path: '/:number', component: Home },
+            { path: '/foo', component: Foo }
+    ]
 })
 
 
 var app = new Vue({
-  el: '#vue-home',
-  // delimiters: ["{","}"],
+    el: '#vue-home',
+    router,
+    data: {
+        code:'',
+        phoneNumber:'',
+        },
 
-  data: {
-    code:'',
-    phoneNumber:'',
-  },
+    methods:{
 
-  methods:{
+    },
 
-  },
-
-  computed: {
+    computed: {
       finalUrl: function(){
           return 'https://text.bz/' + this.phoneNumber
       }
-  }
+    }
 
 })
