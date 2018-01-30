@@ -20,62 +20,19 @@
   <div id='vue-home'>
 		<section class='section vergin-america'>
 			<h1 class='title has-text-white'>Welcome Brands</h1>
-			<h2 class='subtitle has-text-white'>Preorder your <h3 class='title is-5 has-text-danger'>Text.bz/Brand</h3>today</h2>
-            <!-- <router-link to="/foo">Go to Foo</router-link> -->
+			<h2 class='subtitle has-text-white'>Preorder your <b class='title is-5 has-text-warning'>Text.bz/Brand </b>today</h2>
 			<hr />
-        <div class='columns'>
-            <div class='column'>
-                <article class="message is-danger">
-                    <div class='message-body'>
-                        <h2 class='title'>Before:</h2>
-                        <p>Every time you needed to reach someone on whatsapp you needed to add them to your contacts through a lengthy and complicate process</p>
-                    </div>
-                </article>
-            </div>
-            <div class='column'>
-                <article class="message is-primary">
-                    <div class='message-body'>
-                        <h2 class='title'>After:</h2>
-                        <p>Simply copy paste the number after <b>https://text.bz/</b> <br />
-                            We will automatically open Whatsapp and start a conversation.
-                        </p>
-                    </div>
-                </article>
-            </div>
-        </div>
-
-        <article class="message is-info">
-            <div class='message-body'>
-                <div class="field">
-                  <label class="label">Try it Yourself:</label>
-                  <div class="control">
-                    <input class="input" v-model='phoneNumber' type="text" placeholder="Enter Your Phone Number">
-                  </div>
-                  <p class="help">Add country codes as +1, 001 or just 1. <b>They will all work.</b></p>
-                  <br />
-                  <div class="control">
-                      <a class='button is-info is-fullwidth' v-if='phoneNumber.length>6'>{{finalUrl}}</a>
-                      <a class='button is-fullwidth' v-else disabled>{{finalUrl}} (Phone Number too short)</a>
-                  </div>
+            <div class='columns notification'>
+                <div class='column'>
+                    <h2 class='title'>What do you get:</h2>
                 </div>
-
+                <div class='column'>
+                    <h2 class='title'>What do you get:</h2>
+                </div>
             </div>
-        </article>
-
 
 
 		</section>
-        <section class='section'>
-            <div class='columns'>
-            <div class='column'>
-                <h2 class='title'>Business owner?</h2>
-            </div>
-            <div class='column'>
-                <h1 class='title'>Get <a class='has-text-danger'>text.bz/Brand</a></h1>
-            </div>
-            </div>
-            <a class='button is-large has-text-white is-fullwidth river'>Preorder your unique url</a>
-        </section>
 
         <section class='section footer'>
             <div class='columns'>

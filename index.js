@@ -1,28 +1,31 @@
 var Home = { template: '<div>Home</div>' }
 var Foo = { template: '<div>Foo</div>' }
 
-
-// var router = new VueRouter({
-//     mode: 'history',
-//         routes: [
-//             { path: '/:number', component: Home },
-//             { path: '/foo', component: Foo }
-//     ]
-// })
-
-
 var app = new Vue({
     el: '#vue-home',
-    // router,
     data: {
         code:'',
         phoneNumber:'',
         },
 
     created(){
-            console.log(this.$route.query.page)
-            console.log(this.$route)
-            console.log(window.location.pathname)
+            var phoneNumber = window.location.pathname.substr(1) // The /
+            var cleanPhoneNumber = phoneNumber.str.replace("-", "") // Remove all -
+            this.phoneNumber = cleanPhoneNumber
+            if(phoneNumber.length > 6 && phoneNumber != 'brand'){
+                // Number could be valid:
+                console.log('Number Valid')
+                if(phoneNumber.startsWith(+)){
+                    var url = 'https://api.whatsapp.com/send?phone=' + phoneNumber.substr(1)
+                    window.location.replace(url)
+                }
+                else if(phoneNumber.startsWith(00)){
+                    var url = 'https://api.whatsapp.com/send?phone=' + phoneNumber.substr(2)
+                    window.location.replace(url)
+                } else {
+                    var url = 'https://api.whatsapp.com/send?phone=' + phoneNumber
+                    window.location.replace(url)
+                }
     },
 
     methods:{
