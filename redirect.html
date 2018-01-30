@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <!-- COMMON TAGS -->
+  <meta charset="utf-8">
+  <title>Text.bz</title>
+  <!-- Search Engine -->
+  <meta name="description" content="Text.bz url redirecting">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+<p>
+    Sorry this doesn't seem like a valid number
+    <hr />
+    <a href='/'>Go Home</a>
+</p>
+</body>
+
+<script>
+
+var path = window.location.pathname;
+var phoneNumber = path.replace(/\s|[/]|#|[+]|-/g,'') // Remove all nonsense and the first hash of path
+
+if (phoneNumber.length > 6 && isNaN(phoneNumber) == false) {
+    if(phoneNumber.startsWith('00')){
+        var url = 'https://api.whatsapp.com/send?phone=' + phoneNumber.substr(2)
+        window.location.replace(url)
+    }
+    else if(phoneNumber.startsWith('0')){
+        var url = 'https://api.whatsapp.com/send?phone=' + phoneNumber.substr(1)
+        window.location.replace(url)
+    } else {
+        var url = 'https://api.whatsapp.com/send?phone=' + phoneNumber
+        window.location.replace(url)
+    }
+}
+
+</script>
+</body>
+</html>
