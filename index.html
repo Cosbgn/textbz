@@ -10,8 +10,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.css" />
-  <link type="text/css" rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" />
   <link rel="stylesheet" href="index.css" />
 
 </head>
@@ -19,30 +18,30 @@
 <body>
 
   <div id='vue-home'>
-		<section class='section'>
-			<h1 class='title'>Text.bz - Link Your Whatsapp with the world 🌎</h1>
-			<h2 class='subtitle'>Create a short url like text.bz/acme</h2>
+		<section class='section vergin-america'>
+			<h1 class='title has-text-white'>Text.bz</h1>
+			<h2 class='subtitle has-text-white'>Click to chat WhatsApp URL generator</h2>
 			<hr />
         <div class='columns'>
             <div class='column'>
                 <article class="message is-danger">
                     <div class='message-body'>
-                        Stop adding phone numbers to your contacts just to whatsapp them
+                        <h2 class='title'>Before:</h2>
+                        <p>Every time you needed to reach someone on whatsapp you needed to add them to your contacts through a lengthy and complicate process</p>
                     </div>
                 </article>
             </div>
             <div class='column'>
                 <article class="message is-primary">
                     <div class='message-body'>
-                        <p>Simply add copy paste the number after <b>https://text.bz/</b>
-                            It works with every country.
+                        <h2 class='title'>After:</h2>
+                        <p>Simply copy paste the number after <b>https://text.bz/</b> <br />
+                            We will automatically open Whatsapp and start a conversation.
                         </p>
                     </div>
                 </article>
             </div>
         </div>
-
-        <hr />
 
         <article class="message is-info">
             <div class='message-body'>
@@ -51,10 +50,10 @@
                   <div class="control">
                     <input class="input" v-model='phoneNumber' type="text" placeholder="Enter Your Phone Number">
                   </div>
-                  <p class="help">Please add country codes as +1, 001 or just 1. <b>They will all work.</b></p>
+                  <p class="help">Add country codes as +1, 001 or just 1. <b>They will all work.</b></p>
                   <br />
                   <div class="control">
-                      <a class='button is-primary is-fullwidth' v-if='phoneNumber.length>6'>{{finalUrl}}</a>
+                      <a class='button is-info is-fullwidth' v-if='phoneNumber.length>6'>{{finalUrl}}</a>
                       <a class='button is-fullwidth' v-else disabled>{{finalUrl}} (Phone Number too short)</a>
                   </div>
                 </div>
@@ -64,25 +63,39 @@
 
 
 
-
-			<div class='columns'>
-				<div class='column is-3'>
-					<div class="field">
-					  <label class="label">Simply add any phone number after text.bz</label>
-					  <div class="control">
-					    	<textarea wrap="off" class="textarea" type="textarea" placeholder="def sample_code():" style='height:50vh' v-model='code'></textarea>
-						</div>
-					</div>
-				</div>
-				<div class='column is-9'>
-					<pre>
-						{{code}}
-					</pre>
-				</div>
-			</div>
 		</section>
+        <section class='section'>
+            <div class='columns'>
+            <div class='column'>
+                <h2 class='title'>Business owner?</h2>
+            </div>
+            <div class='column'>
+                <h1 class='title'>Get <a class='has-text-danger'>text.bz/Brand</a></h1>
+            </div>
+            </div>
+            <a class='button is-large has-text-white is-fullwidth river'>Preorder your unique url</a>
+        </section>
+
+        <section class='section footer'>
+            <div class='columns'>
+                <div class='column'>
+                    <p> Show us some ❤️ and share this page </p>
+                    <a class='tag is-info' target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=I've%20found%20https%3A//text.bz%20to%20easily%20message%20people%20on%20whatsapp%20">Share on Facebook</a>
+                    <a class='tag is-danger' target="_blank">Share on Twitter</a>
+                </div>
+                <div class='column'>
+                    <p> We collect cookies for Google Analytics. </p>
+                    <p> <b class='has-text-danger'>text.bz</b> works through the <a href='https://faq.whatsapp.com/en/26000030/' target="_blank">official whatsapp API</a></p>
+                </div>
+                <div class='column'>
+                    <p> Made by <a target="_blank" href='https://twitter.com/cosbgn'>@cosbgn</a>. </p>
+                    <p> Send me a <span class='has-text-danger'>Whatsapp</span> at <a target="_blank" href='https://text.bz/cosbgn'>text.bz/cosbgn</a></p>
+                </div>
+            </div>
+        </section>
   </div>
   <script src="https://unpkg.com/vue"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.1/vue-router.min.js"></script>
   <script src="index.js"></script>
 
 </body>
