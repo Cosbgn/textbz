@@ -19,6 +19,12 @@ var app = new Vue({
         phoneNumber:'',
         },
 
+    created(){
+            console.log(this.$route.query.page)
+            console.log(this.$route)
+            console.log(window.location.pathname)
+    },
+
     methods:{
 
     },
