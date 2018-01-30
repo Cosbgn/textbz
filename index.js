@@ -10,12 +10,13 @@ var app = new Vue({
 
     created(){
             var phoneNumber = window.location.pathname.substr(1) // The /
-            var cleanPhoneNumber = phoneNumber.str.replace("-", "") // Remove all -
-            this.phoneNumber = cleanPhoneNumber
-            if(phoneNumber.length > 6 && phoneNumber != 'brand'){
+            //var cleanPhoneNumber = phoneNumber.str.replace("-", "") // Remove all -
+            this.phoneNumber = phoneNumber
+            if (phoneNumber.length > 6 && phoneNumber != 'brand') {
+                var phoneNumber = phoneNumber.str.replace("-", "") // Remove all -
                 // Number could be valid:
                 console.log('Number Valid')
-                if(phoneNumber.startsWith(+)){
+                if(phoneNumber.startsWith('+')){
                     var url = 'https://api.whatsapp.com/send?phone=' + phoneNumber.substr(1)
                     window.location.replace(url)
                 }
@@ -26,6 +27,7 @@ var app = new Vue({
                     var url = 'https://api.whatsapp.com/send?phone=' + phoneNumber
                     window.location.replace(url)
                 }
+            }
     },
 
     methods:{
