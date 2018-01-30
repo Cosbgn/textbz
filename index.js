@@ -1,6 +1,3 @@
-var Home = { template: '<div>Home</div>' }
-var Foo = { template: '<div>Foo</div>' }
-
 var app = new Vue({
     el: '#vue-home',
     data: {
