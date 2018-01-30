@@ -12,11 +12,11 @@
 </head>
 
 <body>
-<p>
-    Sorry this doesn't seem like a valid number
-    <hr />
-    <a href='/'>Go Home</a>
-</p>
+
+    <p>
+        It's happening...
+    </p>
+
 </body>
 
 <script>
@@ -36,6 +36,9 @@ if (phoneNumber.length > 6 && isNaN(phoneNumber) == false) {
         var url = 'https://api.whatsapp.com/send?phone=' + phoneNumber
         window.location.replace(url)
     }
+} else {
+    alert("Sorry this doesn't seem like a valid number 🤨")
+    window.location.replace('/')
 }
 
 </script>
