@@ -9,11 +9,17 @@ var app = new Vue({
         },
 
     created(){
-            var phoneNumber = window.location.pathname.substr(1) // The /
-            //var cleanPhoneNumber = phoneNumber.str.replace("-", "") // Remove all -
+        var phoneNumber = window.location.pathname.substr(1) // The /
+        this.redirectNow(phoneNumber)
+    },
+
+    methods:{
+        redirectNow: function(phoneNumber){
+
+            //var cleanPhoneNumber = phoneNumber.replace("-", "") // Remove all -
             this.phoneNumber = phoneNumber
             if (phoneNumber.length > 6 && phoneNumber != 'brand') {
-                var phoneNumber = phoneNumber.str.replace("-", "") // Remove all -
+                var phoneNumber = phoneNumber.replace("-", "") // Remove all -
                 // Number could be valid:
                 console.log('Number Valid')
                 if(phoneNumber.startsWith('+')){
@@ -28,10 +34,7 @@ var app = new Vue({
                     window.location.replace(url)
                 }
             }
-    },
-
-    methods:{
-
+        }
     },
 
     computed: {
