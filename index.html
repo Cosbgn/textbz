@@ -4,9 +4,9 @@
 <head>
   <!-- COMMON TAGS -->
   <meta charset="utf-8">
-  <title>Typer</title>
+  <title>Text.bz</title>
   <!-- Search Engine -->
-  <meta name="description" content="Speed up video recording">
+  <meta name="description" content="Click to chat WhatsApp URL generator. No Signup or registration required. Completely free. Send a message to anyone on whatsapp without adding them to your contacts.">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -54,7 +54,7 @@
                   <p class="help">Add country codes as +1, 001 or just 1. <b>They will all work.</b></p>
                   <br />
                   <div class="control">
-                      <a class='button is-info is-fullwidth' v-if='phoneNumber.length>6' @click='redirectNow(phoneNumber)'>{{finalUrl}}</a>
+                      <a class='button is-info is-fullwidth' v-if='phoneNumber.length>6' :href=finalUrl >{{finalUrl}}</a>
                       <a class='button is-fullwidth' v-else disabled>{{finalUrl}} (Phone Number too short)</a>
                   </div>
                 </div>
