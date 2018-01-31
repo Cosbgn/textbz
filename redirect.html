@@ -23,7 +23,7 @@
 
 var path = window.location.pathname;
 var decodedPath = decodeURI(path)
-var phoneNumber = decodedPath.replace(/\s|[/]|#|[+]|-/g,'') // Remove all nonsense and the first hash of path
+var phoneNumber = decodedPath.replace(/\s|[/]|#|[()]|[+]|-/g,'') // Remove all nonsense and the first hash of path
 
 if (phoneNumber.length > 6 && isNaN(phoneNumber) == false) {
     if(phoneNumber.startsWith('00')){

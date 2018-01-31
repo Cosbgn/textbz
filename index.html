@@ -13,6 +13,16 @@
   <link rel="stylesheet" href="bulma.min.css" />
   <link rel="stylesheet" href="index.css" />
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113298994-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113298994-1');
+</script>
+
 </head>
 
 <body>
@@ -49,7 +59,7 @@
                 <div class="field">
                   <label class="label">Try it Yourself:</label>
                   <div class="control">
-                    <input class="input" v-model='phoneNumber' type="text" placeholder="Enter Your Phone Number">
+                    <input class="input" v-model='phoneNumber' type="text" placeholder="Enter Your Phone Number With The Country Code!">
                   </div>
                   <p class="help">Add country codes as +1, 001 or just 1. <b>They will all work.</b></p>
                   <br />
@@ -71,10 +81,10 @@
                 <h2 class='title'>Business owner?</h2>
             </div>
             <div class='column'>
-                <h1 class='title'>Get <a class='has-text-danger'>text.bz/Brand</a></h1>
+                <h1 class='title'>Get <a class='has-text-danger' href='/brand'>text.bz/Brand</a></h1>
             </div>
             </div>
-            <a class='button is-large has-text-white is-fullwidth river'>Preorder your unique url</a>
+            <a class='button is-large has-text-white is-fullwidth river' href='/brand'>Preorder your unique url</a>
         </section>
 
         <section class='section footer'>
