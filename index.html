@@ -19,6 +19,8 @@
     <meta property="og:url" content="https://text.bz">
     <meta name="twitter:card" content="image.png">
 
+<link rel="manifest" href="/manifest.json">
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113298994-1"></script>
 <script>
@@ -39,7 +41,7 @@
 			<h2 class='subtitle has-text-white'>Click to chat WhatsApp URL generator</h2>
             <!-- <router-link to="/foo">Go to Foo</router-link> -->
 			<hr />
-        <div class='columns'>
+        <div class='columns' v-if='itsBrowser'>
             <div class='column'>
                 <article class="message is-danger">
                     <div class='message-body'>
