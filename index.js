@@ -3,15 +3,14 @@ var app = new Vue({
     data: {
         phoneNumber:'',
 		itsApp:false,
+		isChrome:false,
         },
 	created(){
 		var path = window.location.search;
 		if (path.indexOf("launcher") !== -1){
 			this.itsApp = true
-			console.log("this runs")
 		}
-		console.log(path)
-		console.log(this.itsApp)
+		this.isChrome = !!window.chrome && !!window.chrome.webstore;
 	},
 
     computed: {
