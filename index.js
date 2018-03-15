@@ -5,7 +5,7 @@ var app = new Vue({
 		itsApp:false,
         },
 	created(){
-		var path = window.location.pathname;
+		var path = window.location.search;
 		if (path.indexOf("launcher") !== -1){
 			this.itsApp = true
 			console.log("this runs")
