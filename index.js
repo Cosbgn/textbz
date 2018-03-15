@@ -2,13 +2,16 @@ var app = new Vue({
     el: '#vue-home',
     data: {
         phoneNumber:'',
-		itsBrowser:true,
+		itsApp:false,
         },
 	created(){
 		var path = window.location.pathname;
-		if (path.indexOf("app") !== -1){
-			this.itsBrowser = false
+		if (path.indexOf("launcher") !== -1){
+			this.itsApp = true
+			console.log("this runs")
 		}
+		console.log(path)
+		console.log(this.itsApp)
 	},
 
     computed: {
