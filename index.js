@@ -11,6 +11,7 @@ var app = new Vue({
 			this.itsApp = true
 		}
 		this.isChrome = !!window.chrome && !!window.chrome.webstore;
+		console.log(isChrome)
 	},
 
     computed: {
