@@ -20,5 +20,5 @@
       "sizes": "192x192"
     }
   ],
-  "start_url": "index.html?launcher=true&utm_source=mobile-app"
+  "start_url": "index.html?launcher=true&utm_source=mobile&utm_medium=app"
 }

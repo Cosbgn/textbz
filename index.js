@@ -16,7 +16,7 @@ var app = new Vue({
 
     computed: {
       finalUrl: function(){
-          return 'https://text.bz/' + this.phoneNumber
+          return 'https://textbz.netlify.com/' + this.phoneNumber
       }
     }
 
